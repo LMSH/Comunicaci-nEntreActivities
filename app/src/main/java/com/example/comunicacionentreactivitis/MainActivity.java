@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         editTextNombre = findViewById(R.id.editTextNombre);
         apellido = findViewById(R.id.Apellido);
 
-        //seteamos un listener de clicks para cuando hagan click en el boton Enviar
+        //seteamos un listener de clicks para cuando hagan click en el boton Enviar.
         buttonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
                 //creamos un intent (Actividad donde estamos, Actividad a donde vamos.class)
                 Intent unIntent = new Intent(MainActivity.this,SegundaActivity.class);
 
-                //opcionalmente si vamos a llevar informacion necesitamos un bundle
+                //opcionalmente si vamos a llevar informacion necesitamos un bundle.
                 Bundle unBundle = new Bundle();
-                unBundle.putString(SegundaActivity.APELLIDO, "Soler");
+                unBundle.putString(SegundaActivity.APELLIDO, apellido1);
                 unBundle.putString(SegundaActivity.NOMBRE,nombre);
 
-                //asociamos el bundle al intent
+                //asociamos el bundle al intent.
                 unIntent.putExtras(unBundle);
-                //iniciamos la nueva actividad
+                //iniciamos la nueva actividad.
                 startActivity(unIntent);
             }
         });
